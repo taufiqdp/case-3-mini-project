@@ -63,3 +63,20 @@ docker compose up -d
 ```
 
 The server will start on http://localhost:8000
+
+## Access the API
+
+- **Interactive API Documentation**: Visit http://localhost:8000/docs for Swagger UI
+- **Alternative Documentation**: Visit http://localhost:8000/redoc for ReDoc UI
+
+**Example API usage with curl**
+
+```bash
+curl -X POST "http://localhost:8000/recommend" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "gender": "female",
+    "age": 62,
+    "symptoms": ["pusing", "mual", "sulit berjalan"]
+}'
+```
