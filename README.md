@@ -52,7 +52,7 @@
    ```
 
 4. **Set up environment variables**
-   Create a `.env` file in the project root:
+   Rename the `.env.example` file to `.env` in the project root and add your Google API key:
    ```env
    GOOGLE_API_KEY=your_google_api_key_here
    ```
