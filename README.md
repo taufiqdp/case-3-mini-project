@@ -5,73 +5,61 @@
 - [Python 3.12](https://www.python.org/downloads/) or higher
 - [Google API Key](https://aistudio.google.com/)
 - [uv](https://docs.astral.sh/uv/getting-started/installation/) (optional)
+- [Docker](https://www.docker.com/get-started/) (optional)
 
-## Installation
+## Setup
 
-### Option 1: Using UV (Recommended)
+**1. Clone the repository**
 
-1. **Clone the repository**
+```bash
+git clone https://github.com/taufiqdp/case-3-mini-project.git
+cd case-3-mini-project
+```
 
-   ```bash
-   git clone https://github.com/taufiqdp/case-3-mini-project.git
-   cd case-3-mini-project
-   ```
+**2. Set up environment variables**
 
-2. **Install dependencies**
-
-   ```bash
-   uv sync
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. **Set up environment variables**
-   Rename the `.env.example` file to `.env` in the project root and add your Google API key:
-   ```env
-   GOOGLE_API_KEY=your_google_api_key_here
-   ```
-
-### Option 2: Using pip
-
-1. **Clone the repository**
-
-   ```bash
-   git clone https://github.com/taufiqdp/case-3-mini-project.git
-   cd case-3-mini-project
-   ```
-
-2. **Create virtual environment**
-
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows: venv\Scripts\activate
-   ```
-
-3. **Install dependencies**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Set up environment variables**
-   Rename the `.env.example` file to `.env` in the project root and add your Google API key:
-   ```env
-   GOOGLE_API_KEY=your_google_api_key_here
-   ```
-
-## Getting Your Google API Key
-
-1. Go to the [Google AI Studio](https://aistudio.google.com/)
+1. Go to [Google AI Studio](https://aistudio.google.com/)
 2. Sign in with your Google account
-3. Click on "Get API Key"
-4. Create a new API key or use an existing one
-5. Copy the API key and add it to your `.env` file
+3. Click "Get API Key" and create/copy your key
+4. Rename `.env.example` to `.env` and add your Google API key:
 
-## Usage
+```env
+GOOGLE_API_KEY=your_google_api_key_here
+```
 
-### Starting the Server
+## Usage (Python)
+
+**1. Installation:**
+
+### Option A: Using uv (Recommended)
+
+```bash
+uv sync
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+### Option B: Using pip
+
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+**2. Run the application**
 
 ```bash
 python server.py
 ```
 
-The server will start on `http://localhost:8000`
+## Usage (Docker)
+
+**1. Run the Docker container**
+
+```bash
+docker-compose up --build
+```
+
+**2. Access the application**
+
+The server will start on http://localhost:8000
