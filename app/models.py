@@ -17,7 +17,7 @@ class PersonInfo(BaseModel):
     @field_validator("age")
     def validate_age_range(cls, value):
         if value < 0 or value > 130:
-            raise ValueError("Age must be between 0 and 120.")
+            raise ValueError("Age must be between 0 and 130.")
         return value
 
 
