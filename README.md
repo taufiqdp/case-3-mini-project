@@ -52,14 +52,14 @@ pip install -r requirements.txt
 python server.py
 ```
 
+The server will start on http://localhost:8000
+
 ## Usage (Docker)
 
 **1. Run the Docker container**
 
 ```bash
-docker-compose up --build
+docker compose up -d
 ```
-
-**2. Access the application**
 
 The server will start on http://localhost:8000
