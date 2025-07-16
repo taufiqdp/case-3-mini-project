@@ -1,9 +1,20 @@
 [project]
 name = "case-3-mini-project"
 version = "0.1.0"
-description = "Add your description here"
+authors = [
+    { name = "Taufiq Dwi Purnomo", email = "topexdw@gmail.com" },
+]
+description = "A mini project to recommend medical departments based on patient information using FastAPI and LangChain with Google GenAI."
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "fastapi[standard]>=0.116.1",
+    "langchain[google-genai]>=0.3.26",
+]
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "isort>=6.0.1",
+    "ruff>=0.12.3",
 ]
