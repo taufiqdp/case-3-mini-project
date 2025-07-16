@@ -34,7 +34,7 @@
 1. **Clone the repository**
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/taufiqdp/case-3-mini-project.git
    cd case-3-mini-project
    ```
 
